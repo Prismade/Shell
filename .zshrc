@@ -1,3 +1,14 @@
+################################################################################
+#                                                                              #
+#                   ███████╗███████╗██╗  ██╗██████╗  ██████╗                   #
+#                   ╚══███╔╝██╔════╝██║  ██║██╔══██╗██╔════╝                   #
+#                     ███╔╝ ███████╗███████║██████╔╝██║                        #
+#                    ███╔╝  ╚════██║██╔══██║██╔══██╗██║                        #
+#                   ███████╗███████║██║  ██║██║  ██║╚██████╗                   #
+#                   ╚══════╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝                   #
+#                                                                              #
+################################################################################
+
 
 ## ===== COMMANDS HISTORY ===== ##
 
@@ -27,22 +38,12 @@ setopt HIST_REDUCE_BLANKS
 ## ===== QOL ===== ##
 
 
-# Turn on commands corrections
-setopt CORRECT
-setopt CORRECT_ALL
-
 # Change directories without cd
 setopt AUTO_CD
 
 # Change default prompt
 export PROMPT='%F{139}%2~%f %F{178}%#%f '
 setopt PROMPT_SUBST
-
-# Change default tethering
-alias ttl='sudo sysctl -w net.inet.ip.ttl=65'
-
-# Delete Xcode drived data
-alias xdd='/bin/rm -rf /Users/prismade/Library/Developer/Xcode/DerivedData/*'
 
 
 ## ===== PLUGINS SETTINGS ===== ##
@@ -54,14 +55,6 @@ source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 if type brew &>/dev/null; then
     FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-
     autoload -Uz compinit
     compinit
 fi
-
-
-## ===== rbenv ===== ##
-
-
-eval "$(rbenv init - zsh)"
-
