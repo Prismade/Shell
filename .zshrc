@@ -45,6 +45,9 @@ setopt AUTO_CD
 export PROMPT='%F{139}%2~%f %F{178}%#%f '
 setopt PROMPT_SUBST
 
+# Run Nevim instead of Vim (to help with muscle memory)
+alias vim=nvim
+
 
 ## ===== PLUGINS SETTINGS ===== ##
 
