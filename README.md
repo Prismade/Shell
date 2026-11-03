@@ -19,9 +19,10 @@ cp $HOME/Shell/.zprofile $HOME/.zprofile
 cp $HOME/Shell/.zshenv $HOME/.zshenv
 cp $HOME/Shell/.zshrc $HOME/.zshrc
 cp $HOME/Shell/.vimrc $HOME/.vimrc
+cp -R $HOME/Shell/.config $HOME/.config
 ```
 
-Restart terminal or `source` all files above (excluding `.vimrc`).
+Restart terminal or `source` all files above (excluding `.vimrc` file and `.config` directory).
 
 If getting error:
 > zsh compinit: insecure directories, run compaudit for list.
